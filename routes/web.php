@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\SongController;
+Route::get('/login',LoginController::class);
 Route::resource('/orm', ArtistController::class);
 Route::post('/artists/create', ArtistController::class .'@store')->name('artists.store');
 Route::delete('/artists/{id}', ArtistController::class .'@destroy')->name('artist.destroy');
